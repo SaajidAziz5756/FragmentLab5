@@ -7,15 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
  * create an instance of this fragment.
  */
-public class DefinitionFragment extends Fragment {
+public class DefinitionFragmentSaajid extends Fragment {
 
-    public DefinitionFragment() {
+    public DefinitionFragmentSaajid() {
         // Required empty public constructor
     }
 
