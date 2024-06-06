@@ -22,26 +22,26 @@ public class ListFragmentAziz extends Fragment {
 
     String[] concepts = new String[]
             {
-                    "Android",
-                    "ART",
-                    "AVD",
-                    "Intent",
-                    "AOT",
-                    "Emulator",
-                    "Activity",
-                    "Fragment",
-                    "Life Cycle events" };
+                    getString(R.string.android),
+                    getString(R.string.art),
+                    getString(R.string.avd),
+                    getString(R.string.intent),
+                    getString(R.string.aot),
+                    getString(R.string.emulator),
+                    getString(R.string.activity),
+                    getString(R.string.fragment),
+                    getString(R.string.life_cycle_events) };
     //
     String[] definition = new String[]
-            {"Open source software stack",
-                    "Android Runtime Environment",
-                    "Android Virtual Device",
-                    "An abstract description of an operation to be performed",
-                    "Ahead of Time compilation",
-                    "Simulates Android devices on your computer",
-                    "Application component that provides a screen",
-                    "A mini activity",
-                    "These methods are called when ....."};
+            {getString(R.string.open_source_software_stack),
+                    getString(R.string.android_runtime_environment),
+                    getString(R.string.android_virtual_device),
+                    getString(R.string.an_abstract_description_of_an_operation_to_be_performed),
+                    getString(R.string.ahead_of_time_compilation),
+                    getString(R.string.simulates_android_devices_on_your_computer),
+                    getString(R.string.application_component_that_provides_a_screen),
+                    getString(R.string.a_mini_activity),
+                    getString(R.string.these_methods_are_called_when)};
 
 
 
@@ -77,7 +77,7 @@ public class ListFragmentAziz extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        Toast.makeText(getActivity(), "Test toast", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), getString(R.string.test_toast), Toast.LENGTH_LONG).show();
     }
 
 }

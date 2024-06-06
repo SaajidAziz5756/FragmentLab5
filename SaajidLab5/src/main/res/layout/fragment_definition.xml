@@ -10,8 +10,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="90px"
-        android:text="Hello"
+        android:textSize="90sp"
+        android:text="@string/hello"
         android:textColor="#ffff00"
         android:layout_gravity="center"
         android:id="@+id/concepts"/>
@@ -20,8 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textColor="#ffffff"
-        android:text="Hello1"
-        android:textSize="70px"
+        android:text="@string/hello1"
+        android:textSize="70sp"
         android:id="@+id/definition"/>
 
 </LinearLayout>
