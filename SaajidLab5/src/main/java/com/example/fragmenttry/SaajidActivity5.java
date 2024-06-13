@@ -4,6 +4,7 @@ package com.example.fragmenttry;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import android.provider.MediaStore;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -95,13 +96,12 @@ public class SaajidActivity5 extends AppCompatActivity {
 
 
         } else if (Id == R.id.Saajidcall) {
-            Intent dialIntent = new Intent(Intent.ACTION_DIAL);
+            Intent dialIntent = new Intent(Intent.ACTION_CALL);
             dialIntent.setData(Uri.parse("tel:6478194715"));
             startActivity(dialIntent);
             return true;
         }else if (Id == R.id.Saajidcamera) {
-            Intent dialIntent = new Intent(Intent.ACTION_DIAL);
-            dialIntent.setData(Uri.parse("tel:6478194715"));
+            Intent dialIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
             startActivity(dialIntent);
             return true;
         }
