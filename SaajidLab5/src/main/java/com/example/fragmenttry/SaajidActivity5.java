@@ -34,30 +34,9 @@ public class SaajidActivity5 extends AppCompatActivity {
             }
         };
 
+
+
         getOnBackPressedDispatcher().addCallback(this, callback);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -66,7 +45,7 @@ public class SaajidActivity5 extends AppCompatActivity {
 
     public void aDialog() {
         new AlertDialog.Builder(SaajidActivity5.this)
-                .setIcon(R.drawable.ic_launcher_background)
+                .setIcon(R.drawable.ic_launcher_foreground)
                 .setMessage(R.string.would_you_like_to_exit_the_app)
                 .setTitle(getString(R.string.app_name))
                 .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener(){
@@ -78,7 +57,14 @@ public class SaajidActivity5 extends AppCompatActivity {
                 .show();
 
     }
+    public void updateDefinition(String concepts, String definitions){
+        DefinitionFragmentSaajid desc = (DefinitionFragmentSaajid) getSupportFragmentManager().findFragmentById(R.id.SaajidfragmentContainerView2);
+       if (desc != null)
+        desc.updateDef(concepts, definitions);
 
+
+
+    }
 
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -127,7 +113,7 @@ public class SaajidActivity5 extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private ActivityResultLauncher<String> requestPermissionLauncher =
+    private final ActivityResultLauncher<String> requestPermissionLauncher =
             registerForActivityResult(new RequestPermission(), isGranted -> {
                 if (isGranted) {
                    dialNumb();

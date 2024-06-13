@@ -16,6 +16,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 /**
  * A simple {@link Fragment} subclass.
  * create an instance of this fragment.
@@ -23,7 +25,8 @@ import android.widget.Toast;
 public class ListFragmentAziz extends Fragment {
 
     private ListView listView;
-
+     String[] concepts;
+    String[] definition;
 
 
 
@@ -31,7 +34,8 @@ public class ListFragmentAziz extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        concepts = getResources().getStringArray(R.array.concepts);
+        definition = getResources().getStringArray(R.array.definitions);
 
     }
 
@@ -40,9 +44,7 @@ public class ListFragmentAziz extends Fragment {
                              Bundle savedInstanceState) {
 
 
-                 String[] concepts = getResources().getStringArray(R.array.concepts);
 
-                String[] definition = getResources().getStringArray(R.array.definitions);
 
 
 
@@ -55,19 +57,20 @@ public class ListFragmentAziz extends Fragment {
 
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(requireActivity(),
                 android.R.layout.simple_list_item_1, concepts);
         //bind the list view with array adapter
         listView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
-        {
-            @Override public void onItemClick(AdapterView<?> arg0, View arg1,int position, long arg3)
-            {
-                  listView.setSelector(android.R.color.holo_blue_dark);
+        listView.setOnItemClickListener((arg0, arg1, position, arg3) -> {
+              listView.setSelector(android.R.color.holo_blue_dark);
 
+              if (getActivity() instanceof SaajidActivity5)
+              {
+                  ((SaajidActivity5) getActivity()).updateDefinition(concepts[position], definition[position]);
 
-            }
+              }
+
         });
 
         return view;
