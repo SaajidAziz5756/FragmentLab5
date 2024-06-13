@@ -87,7 +87,7 @@ public class SaajidActivity5 extends AppCompatActivity {
         if (Id == R.id.Saajidhelp) {
 
             Intent i = new Intent(SaajidActivity5.this, AzizActivity2.class);
-
+            startActivity(i);
 
             return true;
         }

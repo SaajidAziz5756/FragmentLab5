@@ -7,4 +7,47 @@
     android:layout_height="match_parent"
     tools:context=".AzizActivity2">
 
+    <TextView
+        android:id="@+id/SaajidText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="171dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/saajid_aziz"
+        app:layout_constraintBottom_toTopOf="@+id/SaajidDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <DatePicker
+        android:id="@+id/SaajiddatePicker"
+        android:layout_width="313dp"
+        android:layout_height="431dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/SaajidDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="191dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="192dp"
+        android:layout_marginBottom="56dp"
+        android:text="date"
+        app:layout_constraintBottom_toTopOf="@+id/SaajiddatePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SaajidText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

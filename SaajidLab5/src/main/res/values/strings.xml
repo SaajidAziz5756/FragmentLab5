@@ -11,6 +11,7 @@
     <string name="camera">Camera</string>
     <string name="help">help</string>
     <string name="action">action</string>
+    <string name="saajid_aziz">Saajid Aziz</string>
     <string-array name="concepts">
         <item>Android</item>
         <item>ART</item>
