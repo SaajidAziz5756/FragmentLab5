@@ -16,8 +16,8 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class DefinitionFragmentSaajid extends Fragment {
-    TextView con;
-    TextView def ;
+    public static TextView con;
+   public static TextView def ;
 
 
     public DefinitionFragmentSaajid() {
@@ -47,14 +47,6 @@ public class DefinitionFragmentSaajid extends Fragment {
 
     }
 
-    public void updateDef(String concept, String definition)
-    {
-        if (con != null)
-            con.setText(concept);
 
-        if (def != null)
-            def.setText(definition);
-
-    }
 
 }

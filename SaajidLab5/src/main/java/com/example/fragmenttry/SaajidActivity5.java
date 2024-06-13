@@ -57,14 +57,7 @@ public class SaajidActivity5 extends AppCompatActivity {
                 .show();
 
     }
-    public void updateDefinition(String concepts, String definitions){
-        DefinitionFragmentSaajid desc = (DefinitionFragmentSaajid) getSupportFragmentManager().findFragmentById(R.id.SaajidfragmentContainerView2);
-       if (desc != null)
-        desc.updateDef(concepts, definitions);
 
-
-
-    }
 
 
     public boolean onCreateOptionsMenu(Menu menu) {

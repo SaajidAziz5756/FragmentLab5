@@ -3,6 +3,9 @@ package com.example.fragmenttry;
 
 
 
+import static com.example.fragmenttry.DefinitionFragmentSaajid.con;
+import static com.example.fragmenttry.DefinitionFragmentSaajid.def;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -65,11 +68,11 @@ public class ListFragmentAziz extends Fragment {
         listView.setOnItemClickListener((arg0, arg1, position, arg3) -> {
               listView.setSelector(android.R.color.holo_blue_dark);
 
-              if (getActivity() instanceof SaajidActivity5)
-              {
-                  ((SaajidActivity5) getActivity()).updateDefinition(concepts[position], definition[position]);
 
-              }
+
+                    con.setText(concepts[position]);
+                    def.setText(definition[position]);
+
 
         });
 
