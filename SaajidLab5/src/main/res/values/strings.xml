@@ -12,6 +12,10 @@
     <string name="help">help</string>
     <string name="action">action</string>
     <string name="saajid_aziz">Saajid Aziz</string>
+    <string name="saajid_aziz_permission_denied">Saajid Aziz: Permission Denied</string>
+    <string name="would_you_like_to_exit_the_app">Would you like to exit the app?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string-array name="concepts">
         <item>Android</item>
         <item>ART</item>

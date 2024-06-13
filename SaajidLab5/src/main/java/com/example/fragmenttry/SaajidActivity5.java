@@ -67,13 +67,13 @@ public class SaajidActivity5 extends AppCompatActivity {
     public void aDialog() {
         new AlertDialog.Builder(SaajidActivity5.this)
                 .setIcon(R.drawable.ic_launcher_background)
-                .setMessage("Would you like to exit the app?")
+                .setMessage(R.string.would_you_like_to_exit_the_app)
                 .setTitle(getString(R.string.app_name))
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener(){
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener(){
                     @Override
                     public void onClick(DialogInterface dialog,int which ) {finishAffinity();}
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton(R.string.no, null)
                 .setCancelable(false)
                 .show();
 
@@ -120,7 +120,7 @@ public class SaajidActivity5 extends AppCompatActivity {
 
             return true;
         }else if (Id == R.id.Saajidcamera) {
-            Intent in = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            Intent in = new Intent("android.media.action.IMAGE_CAPTURE");
             startActivity(in);
             return true;
         }
@@ -132,7 +132,7 @@ public class SaajidActivity5 extends AppCompatActivity {
                 if (isGranted) {
                    dialNumb();
                 } else {
-                    Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.saajid_aziz_permission_denied, Toast.LENGTH_SHORT).show();
                 }
             });
     private void dialNumb()
