@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/Saajidhelp"
+        android:title="@string/help"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/SaajidAction"
+        android:title="@string/action"
+        app:showAsAction="always">
+
+        <menu>
+
+            <item
+                android:id="@+id/Saajidcall"
+                android:title="@string/dial"
+                app:showAsAction="ifRoom"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"/>
+
+            <item
+                android:id="@+id/Saajidcamera"
+                android:title="@string/camera"
+                app:showAsAction="always" />
+        </menu>
+    </item>
+</menu>

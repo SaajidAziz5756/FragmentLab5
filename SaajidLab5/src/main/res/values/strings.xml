@@ -7,22 +7,31 @@
     <string name="hello">Hello</string>
     <string name="hello1">Hello1</string>
     <string name="test_toast">Test toast</string>
-    <string name="android">Android</string>
-    <string name="art">ART</string>
-    <string name="avd">AVD</string>
-    <string name="intent">Intent</string>
-    <string name="aot">AOT</string>
-    <string name="emulator">Emulator</string>
-    <string name="activity">Activity</string>
-    <string name="fragment">Fragment</string>
-    <string name="life_cycle_events">Life Cycle events</string>
-    <string name="open_source_software_stack">Open source software stack</string>
-    <string name="android_runtime_environment">Android Runtime Environment</string>
-    <string name="android_virtual_device">Android Virtual Device</string>
-    <string name="an_abstract_description_of_an_operation_to_be_performed">An abstract description of an operation to be performed</string>
-    <string name="ahead_of_time_compilation">Ahead of Time compilation</string>
-    <string name="simulates_android_devices_on_your_computer">Simulates Android devices on your computer</string>
-    <string name="application_component_that_provides_a_screen">Application component that provides a screen</string>
-    <string name="a_mini_activity">A mini activity</string>
-    <string name="these_methods_are_called_when">These methods are called when .....</string>
+    <string name="dial">Dial</string>
+    <string name="camera">Camera</string>
+    <string name="help">help</string>
+    <string name="action">action</string>
+    <string-array name="concepts">
+        <item>Android</item>
+        <item>ART</item>
+        <item>AVD</item>
+        <item>Intent</item>
+        <item>AOT</item>
+        <item> Emulator</item>
+        <item>Activity</item>
+        <item>Fragment</item>
+        <item>Life Cycle events</item>
+    </string-array>
+    <string-array name="definitions">
+        <item>Open source software stack</item>
+        <item>Android Runtime Environment</item>
+        <item>Android Virtual Device</item>
+        <item>An abstract description of an operation to be performed</item>
+        <item>Ahead of Time compilation</item>
+        <item>Simulates Android devices on your computer</item>
+        <item>Application component that provides a screen</item>
+        <item>A mini activity</item>
+        <item>These methods are called when .....</item>
+    </string-array>
+
 </resources>

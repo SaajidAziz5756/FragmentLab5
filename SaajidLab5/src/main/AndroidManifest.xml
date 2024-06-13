@@ -12,6 +12,9 @@
         android:theme="@style/Theme.FragmentTry"
         tools:targetApi="31">
         <activity
+            android:name=".AzizActivity2"
+            android:exported="false" />
+        <activity
             android:name=".SaajidActivity5"
             android:exported="true">
             <intent-filter>

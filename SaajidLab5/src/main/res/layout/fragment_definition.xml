@@ -8,20 +8,21 @@
     >
 
     <TextView
+        android:id="@+id/Saajidconcepts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="90sp"
+        android:layout_gravity="center"
         android:text="@string/hello"
         android:textColor="#ffff00"
-        android:layout_gravity="center"
-        android:id="@+id/Saajidconcepts"/>
+        android:textSize="34sp" />
+
     <TextView
+        android:id="@+id/Saajiddefinition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textColor="#ffffff"
         android:text="@string/hello1"
-        android:textSize="70sp"
-        android:id="@+id/Saajiddefinition"/>
+        android:textColor="#ffffff"
+        android:textSize="24sp" />
 
 </LinearLayout>

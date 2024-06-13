@@ -1,6 +1,8 @@
 //Saajid Aziz   n01555756
 package com.example.fragmenttry;
 
+
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 /**
@@ -21,34 +24,14 @@ public class ListFragmentAziz extends Fragment {
 
     private ListView listView;
 
-//    String[] concepts = new String[]
-//            {
-//                    "Android",
-//                    "ART",
-//                    "AVD",
-//                    "Intent",
-//                    "AOT",
-//                    "Emulator",
-//                    "Activity",
-//                    "Fragment",
-//                    "Life Cycle events" };
-//    //
-//    String[] definition = new String[]
-//            {"Open source software stack",
-//                    "Android Runtime Environment",
-//                    "Android Virtual Device",
-//                    "An abstract description of an operation to be performed",
-//                    "Ahead of Time compilation",
-//                    "Simulates Android devices on your computer",
-//                    "Application component that provides a screen",
-//                    "A mini activity",
-//                    "These methods are called when ....."};
+
 
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
     }
 
@@ -57,36 +40,20 @@ public class ListFragmentAziz extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        String[] concepts = new String[]
-                {
-                        getString(R.string.android),
-                        getString(R.string.art),
-                        getString(R.string.avd),
-                        getString(R.string.intent),
-                        getString(R.string.aot),
-                        getString(R.string.emulator),
-                        getString(R.string.activity),
-                        getString(R.string.fragment),
-                        getString(R.string.life_cycle_events)
-                };
-        //
-        String[] definition = new String[]
-                {
-                        getString(R.string.open_source_software_stack),
-                        getString(R.string.android_runtime_environment),
-                        getString(R.string.android_virtual_device),
-                        getString(R.string.an_abstract_description_of_an_operation_to_be_performed),
-                        getString(R.string.ahead_of_time_compilation),
-                        getString(R.string.simulates_android_devices_on_your_computer),
-                        getString(R.string.application_component_that_provides_a_screen),
-                        getString(R.string.a_mini_activity),
-                        getString(R.string.these_methods_are_called_when)};
+                 String[] concepts = getResources().getStringArray(R.array.concepts);
+
+                String[] definition = getResources().getStringArray(R.array.definitions);
 
 
 
-        // Inflate the layout for this fragment
+
+
+                // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_list, container, false);
         listView = view.findViewById(R.id.SaajidlistView1);
+
+
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
                 android.R.layout.simple_list_item_1, concepts);
@@ -98,6 +65,8 @@ public class ListFragmentAziz extends Fragment {
             @Override public void onItemClick(AdapterView<?> arg0, View arg1,int position, long arg3)
             {
                   listView.setSelector(android.R.color.holo_blue_dark);
+
+
             }
         });
 
