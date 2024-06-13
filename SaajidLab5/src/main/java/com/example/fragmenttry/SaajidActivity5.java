@@ -4,6 +4,12 @@ package com.example.fragmenttry;
 import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts.RequestPermission;
+
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.provider.MediaStore;
 
 import android.content.DialogInterface;
@@ -13,6 +19,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class SaajidActivity5 extends AppCompatActivity {
 
@@ -96,18 +103,42 @@ public class SaajidActivity5 extends AppCompatActivity {
 
 
         } else if (Id == R.id.Saajidcall) {
-            Intent dialIntent = new Intent(Intent.ACTION_CALL);
-            dialIntent.setData(Uri.parse("tel:6478194715"));
-            startActivity(dialIntent);
+
+
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED)
+            {
+
+
+               dialNumb();
+
+            } else{
+                requestPermissionLauncher.launch(Manifest.permission.CALL_PHONE);
+
+            }
+
+
+
             return true;
         }else if (Id == R.id.Saajidcamera) {
-            Intent dialIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivity(dialIntent);
+            Intent in = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivity(in);
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-
-
+    private ActivityResultLauncher<String> requestPermissionLauncher =
+            registerForActivityResult(new RequestPermission(), isGranted -> {
+                if (isGranted) {
+                   dialNumb();
+                } else {
+                    Toast.makeText(this, "Permission Denied", Toast.LENGTH_SHORT).show();
+                }
+            });
+    private void dialNumb()
+    {
+        Intent dial = new Intent(Intent.ACTION_CALL);
+        dial.setData(Uri.parse("tel:6478294715"));
+        startActivity(dial);
+    }
 }
